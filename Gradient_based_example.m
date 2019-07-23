@@ -16,3 +16,4 @@ y = x.^4 - 50*x.^3 - 1800*x.^2 - 800*x;
 plot(x,y)
 grid on
 yprim = diff(y,x);
+xopt = solve(yprime==0, x);
