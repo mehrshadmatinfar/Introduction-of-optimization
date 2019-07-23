@@ -21,9 +21,13 @@ x0 = (ub-lb) * rand(1, n) + lb;
 y0 = y(x0);
 
 %% Searching algorithm
+    %% input
 maxItr = 10;
+step = 4;
+    %% Calculations
 for i=1:maxItr
-    xnew = (ub-lb) * rand(1, n) + lb;
+%     xnew = (ub-lb) * rand(1, n) + lb;
+    xnew = x0 + (-1^randi(2)) * step;
     ynew = y(xnew);
     if ynew<y0
         x0 = xnew;
